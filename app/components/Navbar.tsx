@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 import { Camera, LayoutDashboard, TrendingUp, Users, Menu, Flame } from "lucide-react";
@@ -20,6 +20,7 @@ import {
 
 export function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
   const [showEmergencyDialog, setShowEmergencyDialog] = useState(false);
 
@@ -76,7 +77,7 @@ export function Navbar() {
             <AlertDialogAction
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
               onClick={() => {
-                setLocation("/report?type=fire");
+                router.push("/report?type=fire");
               }}
             >
               Continue to Report

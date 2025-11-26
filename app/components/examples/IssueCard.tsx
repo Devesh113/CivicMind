@@ -1,5 +1,7 @@
 import { IssueCard } from "../IssueCard";
-import heroImage from "@assets/generated_images/pothole_in_road_surface.png";
+
+// Placeholder image
+const heroImage = "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&h=300&fit=crop";
 
 export default function IssueCardExample() {
   return (
