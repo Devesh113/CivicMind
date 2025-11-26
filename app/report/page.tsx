@@ -9,12 +9,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Progress } from "@/components/ui/progress";
 import { MapPin, Loader2, CheckCircle2, Upload, Flame, AlertTriangle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { useLocation } from "wouter";
-import potholeImage from "@assets/generated_images/pothole_in_road_surface.png";
+import { useRouter } from "next/navigation";
+// Placeholder image
+const potholeImage = "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&h=300&fit=crop";
 
 export default function ReportIssue() {
   const { toast } = useToast();
-  const [location] = useLocation();
+  const router = useRouter();
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [image, setImage] = useState<string>();
   const [analyzing, setAnalyzing] = useState(false);
@@ -28,11 +29,13 @@ export default function ReportIssue() {
   const [isEmergency, setIsEmergency] = useState(false);
 
   useEffect(() => {
-    const params = new URLSearchParams(location.split('?')[1]);
-    if (params.get('type') === 'fire') {
-      setIsEmergency(true);
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('type') === 'fire') {
+        setIsEmergency(true);
+      }
     }
-  }, [location]);
+  }, []);
 
   const handleImageSelect = (file: File) => {
     const reader = new FileReader();

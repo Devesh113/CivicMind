@@ -5,10 +5,11 @@ import { IssueCard } from "@/components/IssueCard";
 import { MetricCard } from "@/components/MetricCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Camera, CheckCircle2, Clock, AlertCircle } from "lucide-react";
-import potholeImage from "@assets/generated_images/pothole_in_road_surface.png";
-import garbageImage from "@assets/generated_images/overflowing_garbage_bin_problem.png";
-import streetlightImage from "@assets/generated_images/broken_streetlight_infrastructure_issue.png";
-import drainageImage from "@assets/generated_images/blocked_drainage_water_problem.png";
+// Placeholder images
+const potholeImage = "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&h=300&fit=crop";
+const garbageImage = "https://images.unsplash.com/photo-1621451537084-482c73073a0f?w=400&h=300&fit=crop";
+const streetlightImage = "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=400&h=300&fit=crop";
+const drainageImage = "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop";
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("all");

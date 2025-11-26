@@ -5,11 +5,13 @@ import { Button } from "@/components/ui/button";
 import { MetricCard } from "@/components/MetricCard";
 import { IssueCard } from "@/components/IssueCard";
 import { Camera, CheckCircle2, Clock, Users, ArrowRight } from "lucide-react";
-import heroImage from "@assets/generated_images/before_after_garbage_cleanup_transformation.png";
-import potholeImage from "@assets/generated_images/pothole_in_road_surface.png";
-import garbageImage from "@assets/generated_images/overflowing_garbage_bin_problem.png";
-import drainageImage from "@assets/generated_images/blocked_drainage_water_problem.png";
-import fireImage from "@assets/generated_images/building_fire_emergency_situation.png";
+
+// Placeholder images
+const heroImage = "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&h=600&fit=crop";
+const potholeImage = "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&h=300&fit=crop";
+const garbageImage = "https://images.unsplash.com/photo-1621451537084-482c73073a0f?w=400&h=300&fit=crop";
+const drainageImage = "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop";
+const fireImage = "https://images.unsplash.com/photo-1523029783039-c3e9aced7fd1?w=400&h=300&fit=crop";
 
 export default function Home() {
   const mockIssues = [
