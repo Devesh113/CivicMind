@@ -1,0 +1,160 @@
+CleanCity — AI-Powered Civic Issue Reporter
+
+
+
+
+Tagline:
+"Click. Detect. Report. Clean your city with one tap."
+
+✅ 1. Problem (Judge-friendly)
+
+People see potholes, garbage dumps, overflowing drains, broken lights —
+but don’t report because:
+
+They don’t know where to report
+It takes time
+Govt apps are hard to use
+Issues are ignored
+Result → City stays dirty + unsafe.
+
+
+
+✅ 2. Solution (Your Product)
+
+A web/app where users just take a photo, and AI will:
+
+✅ Detect the type of civic issue (pothole, garbage, water leak, broken streetlight, illegal parking, etc.)
+✅ Identify severity
+✅ Auto-capture GPS location
+✅ Auto-generate a complaint report
+✅ Sends it to the right local authority / email
+✅ Track progress
+
+✅ 3. Core MVP Features (Buildable in 24–48 hours)
+✅ 1. Capture/Upload Image
+
+Allow users to upload a photo of the issue.
+
+✅ 2. AI Issue Identification
+
+Use AI to classify:
+Garbage dump
+Pothole
+Water leakage
+Broken streetlight
+Blocked footpath
+Illegal parking
+Open manhole
+
+✅ 3. Auto-location
+
+Extract GPS using browser location.
+
+
+
+✅ 4. Auto-generate Complaint Summary
+
+AI creates:
+
+Issue type
+Estimated severity
+Exact location
+Recommended department
+
+
+
+
+✅ 5. Submit Report
+
+Send report to:
+
+Municipality email
+Local ward office
+Community dashboard
+(For hackathon, just simulate sending → store in database).
+
+✅ 6. Issue Tracking
+
+Statuses:
+Pending
+Acknowledged
+In-progress
+Resolved
+
+Admins can update status.
+
+✅ 4. Advanced (If time remains)
+
+✅ Heatmap of issues in the city
+✅ Community points for reporting
+✅ “Before/After” update feed
+✅ Push notifications
+✅ Leaderboard of top reporters
+✅ AI auto-severity rating
+✅ Suggestions page (how to avoid civic issues)
+
+✅ 5. Target Users
+
+Normal citizens
+Students
+RWAs (Resident Welfare Associations)
+Municipal bodies
+Traffic police
+NGOs working in cleanliness or urban civic improvement
+
+✅ 6. Tech Stack (Simple & Fast)
+🔹 Frontend:
+React / Next.js
+Tailwind CSS
+
+
+
+
+🔹 Backend:
+Node.js / Express
+Firebase (fastest) or Supabase
+
+
+
+🔹 AI:
+Claude Vision (for image analysis)
+Emergent Tools (optional for automation)
+
+
+
+🔹 Database:
+Firestore / Supabase
+
+
+
+✅ 7. AI Prompt (for classification)
+
+Input: Image
+Output:
+
+Category
+Severity (low/medium/high)
+Explanation
+
+
+
+
+✅ 8. 1-Minute Pitch (Use this for judges)
+
+"Today, people see civic issues every day — potholes, garbage, broken lights — but 90% never report because the process is slow and confusing.
+
+Introducing CleanCity: an AI-powered civic reporting platform.
+Just click a picture — our AI identifies the issue, detects location, creates a complaint report, and sends it to the right authority. You can track the status, see issues around you, and help clean your neighborhood in seconds.
+
+CleanCity makes civic responsibility easy, fast, and accessible.
+One click = cleaner city."
+
+✅ 9. Possible Screens (simple)
+
+Home → “Report an Issue”
+Upload Photo
+AI Result Page
+Confirm & Submit
+My Reports
+Admin Panel
+Map View (optional)
