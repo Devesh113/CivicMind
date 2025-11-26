@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import { ImageUpload } from "@/components/ImageUpload";
 import { Button } from "@/components/ui/button";

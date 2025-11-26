@@ -1,4 +1,7 @@
-import { Link, useLocation } from "wouter";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 import { Camera, LayoutDashboard, TrendingUp, Users, Menu, Flame } from "lucide-react";
@@ -16,7 +19,7 @@ import {
 } from "@/components/ui/alert-dialog";
 
 export function Navbar() {
-  const [location, setLocation] = useLocation();
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [showEmergencyDialog, setShowEmergencyDialog] = useState(false);
 
@@ -31,7 +34,7 @@ export function Navbar() {
     <>
       {navItems.map((item) => {
         const Icon = item.icon;
-        const isActive = location === item.path;
+        const isActive = pathname === item.path;
         return (
           <Link
             key={item.path}

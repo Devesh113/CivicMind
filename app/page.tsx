@@ -1,4 +1,6 @@
-import { Link } from "wouter";
+"use client";
+
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MetricCard } from "@/components/MetricCard";
 import { IssueCard } from "@/components/IssueCard";

@@ -19,16 +19,26 @@ export function ThemeProvider({
   children,
   defaultTheme = "light",
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem("theme") as Theme) || defaultTheme
-  );
+  const [theme, setTheme] = useState<Theme>(defaultTheme);
+  const [mounted, setMounted] = useState(false);
+
+  // Load theme from localStorage after component mounts (client-side only)
+  useEffect(() => {
+    setMounted(true);
+    const savedTheme = localStorage.getItem("theme") as Theme;
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
 
   useEffect(() => {
+    if (!mounted) return;
+
     const root = document.documentElement;
     root.classList.remove("light", "dark");
     root.classList.add(theme);
     localStorage.setItem("theme", theme);
-  }, [theme]);
+  }, [theme, mounted]);
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));

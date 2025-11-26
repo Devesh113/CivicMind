@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { IssueCard } from "@/components/IssueCard";
 import { MetricCard } from "@/components/MetricCard";

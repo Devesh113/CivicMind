@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { LeaderboardTable } from "@/components/LeaderboardTable";
 import {
